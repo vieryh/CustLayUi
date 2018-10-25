@@ -9,39 +9,7 @@
     <link href="layui/css/layui.css" rel="stylesheet" />
     <script src="js/jquery-3.3.1.js"></script>
     <script src="layui/layui.js"></script>
-    <script>
-        $(function () {
-            $("#bt1").click(function () {
-                layui.use('layer', function () {
-                    var layer = layui.layer;
-
-                    var index = layer.open({
-                        type:2,
-                        title: '添加记录',
-                        fix: false,
-                        maxmin: true,
-                        shadeClose: true,
-                        shade: 0.8,
-                        area: ['650px', '600px'],
-                        content: '/addPro.aspx',
-                        success: function (layero, index) {
-                            layui.use('laydate', function () {
-                                var laydate = layui.laydate;
-                                //执行一个laydate实例
-                                laydate.render({
-                                    elem: '#RTime' //指定元素
-                                });
-                            });
-
-                        }
-
-                    });
-                });
-
-
-            });
-        })
-    </script>
+   
 </head>
 <body>
 
@@ -52,7 +20,7 @@
 
     <div class="layui-row layui-col-space10">
         <div class="layui-col-md12">
-            <button id="bt1" class="layui-btn layui-btn-primary">添加</button>
+           <a href="/addPro.aspx" class="layui-btn">添加</a>
         </div>
     </div>
 

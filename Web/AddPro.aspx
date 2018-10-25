@@ -29,7 +29,15 @@
                 </div>
             </div>
         </div>
-      
+        <script>    
+            layui.use('laydate', function () {
+                var laydate = layui.laydate;
+                //执行一个laydate实例
+                laydate.render({
+                    elem: '#RTime' //指定元素
+                });
+            });
+        </script>
 
         <div class="layui-form-item">
             <label class="layui-form-label">电话</label>
