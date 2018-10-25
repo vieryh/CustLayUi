@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddCusto.aspx" />
+    <Content Include="AddPro.aspx" />
     <Content Include="company.jpg" />
     <Content Include="Controls\checkright.ascx" />
     <Content Include="Controls\copyright.ascx" />
@@ -1184,6 +1185,13 @@
     <Compile Include="AddCusto.aspx.designer.cs">
       <DependentUpon>AddCusto.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddPro.aspx.cs">
+      <DependentUpon>AddPro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddPro.aspx.designer.cs">
+      <DependentUpon>AddPro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ashx\AddCust.ashx.cs">
       <DependentUpon>AddCust.ashx</DependentUpon>
     </Compile>
@@ -1361,7 +1369,7 @@
   <ItemGroup>
     <Folder Include="Admin\" />
     <Folder Include="Components\" />
-    <Folder Include="layui\" />
+    <Folder Include="css\layui\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\default.css.bak" />

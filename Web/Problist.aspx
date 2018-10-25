@@ -9,6 +9,39 @@
     <link href="layui/css/layui.css" rel="stylesheet" />
     <script src="js/jquery-3.3.1.js"></script>
     <script src="layui/layui.js"></script>
+    <script>
+        $(function () {
+            $("#bt1").click(function () {
+                layui.use('layer', function () {
+                    var layer = layui.layer;
+
+                    var index = layer.open({
+                        type:2,
+                        title: '添加记录',
+                        fix: false,
+                        maxmin: true,
+                        shadeClose: true,
+                        shade: 0.8,
+                        area: ['650px', '600px'],
+                        content: '/addPro.aspx',
+                        success: function (layero, index) {
+                            layui.use('laydate', function () {
+                                var laydate = layui.laydate;
+                                //执行一个laydate实例
+                                laydate.render({
+                                    elem: '#RTime' //指定元素
+                                });
+                            });
+
+                        }
+
+                    });
+                });
+
+
+            });
+        })
+    </script>
 </head>
 <body>
 
@@ -32,7 +65,7 @@
             //第一个实例
             table.render({
                 elem: '#demo'
-      
+
               , url: '/Servers/ProServer.asmx/GetPro' //数据接口
                 , skin: 'row' //表格风格
               , page: {
@@ -52,7 +85,7 @@
                   };
               },
                 cols: [[ //表头
-                  { field: 'Id', title: 'ID', sort: true}
+                  { field: 'Id', title: 'ID', sort: true }
                   , { field: 'DATE', title: '记录时间', sort: true, }
                   , { field: 'Reportor', title: '上报人', sort: true, }
                   , { field: 'Phone', title: '电话', sort: true, }
@@ -104,6 +137,8 @@
 
 
     </script>
+
+
 
 </body>
 </html>

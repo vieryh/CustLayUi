@@ -10,6 +10,6 @@
 namespace Cust.Web {
     
     
-    public partial class CustNew {
+    public partial class AddPro {
     }
 }
